@@ -1,13 +1,12 @@
 <script lang="ts">
-  import Highlight from "svelte-highlight";
-  import typescript from "svelte-highlight/languages/typescript";
+  import { HighlightSvelte } from "svelte-highlight";
   import "svelte-highlight/styles/github-dark-dimmed.css";
 
   export let code: string;
 </script>
 
 <div class="code-wrapper">
-  <Highlight language={typescript} {code} />
+  <HighlightSvelte {code} />
 </div>
 
 <style>
