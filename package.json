@@ -1,12 +1,13 @@
 {
-	"name": "svelte-stepper",
-	"version": "0.1.0",
+	"name": "@efstajas/svelte-stepper",
+	"description": "🚶🚶🚶 A simple library for building delightfully animated stepped flows with Svelte.",
+	"keywords": ["svelte", "sveltekit", "typescript", "javascript", "js", "ts", "ui-library", "stepper", "animations"],
+	"version": "0.1.1",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package -o package",
 		"build-demo": "vite build",
-		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
 		"test": "playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
