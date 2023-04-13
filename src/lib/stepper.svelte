@@ -104,7 +104,7 @@
 	let resizeObserver = BROWSER ? new ResizeObserver(() => updateContainerHeight()) : undefined;
 	let observedElement: HTMLDivElement | undefined;
 
-	async function updateMutationObserver() {
+	async function updateResizeObserver() {
 		await tick();
 
 		resizeObserver?.disconnect();
@@ -204,7 +204,7 @@
 
 	$: {
 		currentStep;
-		updateMutationObserver();
+		updateResizeObserver();
 	}
 
 	onMount(() => {
