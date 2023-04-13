@@ -1,4 +1,4 @@
-# Svelte Stepper
+# 🚶 Svelte Stepper
 
 ![GIF of Svelte Stepper in action](https://github.com/efstajas/svelte-stepper/raw/main/docs/demo.gif)
 
