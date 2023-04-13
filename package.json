@@ -1,0 +1,82 @@
+{
+	"name": "svelte-stepper",
+	"version": "0.1.0",
+	"license": "MIT",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "svelte-kit sync && svelte-package -o package",
+		"build-demo": "vite build",
+		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
+		"test": "playwright test",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test:unit": "vitest",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"peerDependencies": {
+		"svelte": "^3.54.0"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.28.1",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.5.0",
+		"@sveltejs/package": "^2.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.45.0",
+		"@typescript-eslint/parser": "^5.45.0",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.8.1",
+		"svelte": "^3.54.0",
+		"svelte-check": "^3.0.1",
+		"svelte-highlight": "^7.2.0",
+		"tslib": "^2.4.1",
+		"typescript": "^4.9.3",
+		"vite": "^4.0.0",
+		"vitest": "^0.25.3"
+	},
+	"type": "module",
+	"exports": {
+		"./package.json": "./package.json",
+		".": {
+			"types": "./package/index.d.ts",
+			"svelte": "./package/index.js",
+			"default": "./package/index.js"
+		},
+		"./step-controller": {
+			"types": "./package/step-controller.d.ts",
+			"default": "./package/step-controller.js"
+		},
+		"./stepper.svelte": {
+			"types": "./package/stepper.svelte.d.ts",
+			"svelte": "./package/stepper.svelte",
+			"default": "./package/stepper.svelte"
+		},
+		"./types": {
+			"types": "./package/types.d.ts",
+			"default": "./package/types.js"
+		}
+	},
+	"files": [
+		"package"
+	],
+	"svelte": "./package/index.js",
+	"typesVersions": {
+		">4.0": {
+			"index": [
+				"./package/index.d.ts"
+			],
+			"step-controller": [
+				"./package/step-controller.d.ts"
+			],
+			"stepper.svelte": [
+				"./package/stepper.svelte.d.ts"
+			],
+			"types": [
+				"./package/types.d.ts"
+			]
+		}
+	}
+}
