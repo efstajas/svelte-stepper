@@ -11,13 +11,13 @@
 <style>
   .progress-bar {
     width: 100%;
-    height: 1rem;
+    height: 0.5rem;
     background-color: var(--color-primary-level-1);
   }
 
   .progress-bar .inner {
     height: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-level-2);
     transition: width 300ms ease;
     border-radius: 0 1rem 1rem 0;
   }

@@ -11,15 +11,11 @@
 	import Stepper from '$lib/stepper.svelte';
 	import Intro from './components/demo-steps/intro.svelte';
 	import Features from './components/demo-steps/features.svelte';
-	import GettingStarted from './components/demo-steps/getting-started.svelte';
 	import Animations from './components/demo-steps/animations.svelte';
 	import ProgressBar from './components/progress-bar.svelte';
 	import { writable, type Writable } from 'svelte/store';
-	import Context from './components/demo-steps/context.svelte';
 	import Outro from './components/demo-steps/outro.svelte';
-	import Events from './components/demo-steps/events.svelte';
 	import Sidestep from './components/demo-steps/sidestep.svelte';
-	import Installation from './components/demo-steps/installation.svelte';
 
 	let context: Writable<ExampleStepperContext>;
 	const stepperContext = () => {
@@ -42,27 +38,11 @@
 			props: undefined
 		}),
 		makeStep({
-			component: Installation,
-			props: undefined
-		}),
-		makeStep({
-			component: GettingStarted,
-			props: undefined
-		}),
-		makeStep({
 			component: Animations,
 			props: undefined
 		}),
 		makeStep({
-			component: Context,
-			props: undefined
-		}),
-		makeStep({
 			component: Sidestep,
-			props: undefined
-		}),
-		makeStep({
-			component: Events,
 			props: undefined
 		}),
 		makeStep({

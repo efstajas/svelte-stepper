@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { createStepController, makeStep } from '$lib';
 	import Button from '../button.svelte';
-	import { SIDESTEP } from './code-examples/sidestep';
-	import Code from './components/code.svelte';
 	import StepLayout from './components/step-layout.svelte';
 
 	import SidestepStep1 from './sidestep-steps/1.svelte';
@@ -18,11 +16,6 @@
 		Stepper includes <span class="typo-inline-code">sidestep</span> functionality for this purpose. Using a side-step,
 		you can easily temporarily launch a different flow, and come back to the original flow at the end.
 	</p>
-	<p>
-		To trigger a side-step, simply call <span class="typo-inline-code">stepController.sidestep(steps)</span> within a step component,
-		where `steps` is an array of new steps:
-	</p>
-	<Code code={SIDESTEP} />
 	<p>
 		Try it out! The following button is going to launch a short side-step flow, at the end of which
 		you'll land back here.

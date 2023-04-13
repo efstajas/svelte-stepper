@@ -10,8 +10,7 @@
 	<h2>Features</h2>
 	<p>
 		Svelte Stepper comes with a lot of built-in functionality, while still remaining easy-to-use at
-		its core. We'll go through most of the below features in detail in a bit — but for now, here's
-		an overview:
+		its core.
 	</p>
 
 	<h4>Simple & safe</h4>
