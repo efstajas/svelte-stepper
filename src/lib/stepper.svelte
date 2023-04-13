@@ -17,9 +17,6 @@
 	export let context: CW | undefined = undefined;
 	const resolvedContext = context?.();
 
-	// Handler props
-	export let onConclusion: ((ctx: typeof resolvedContext) => void) | undefined = undefined;
-
 	// Style props
 	export let padding: string | undefined = undefined;
 
@@ -201,7 +198,7 @@
 			originalStepIndex = undefined;
 			disableTransitions = false;
 		} else {
-			onConclusion?.(resolvedContext);
+			dispatch('conclusion');
 		}
 	}
 

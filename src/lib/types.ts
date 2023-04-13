@@ -50,4 +50,5 @@ export interface StepperEvents {
     of: number;
     direction: 'forward' | 'backward';
   }
+  conclusion: never;
 }
