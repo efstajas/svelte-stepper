@@ -8,6 +8,8 @@ A simple library for building delightfully animated stepped flows with Svelte.
 
 Check out an interactive demo and documentation of this library at [svelte-stepper.jason-e.dev](https://svelte-stepper.jason-e.dev/).
 
+You can find the demo implementation, which also serves as a usage example, at /src/routes in this repo.
+
 ## ✨ Features
 
 Svelte Stepper comes with a lot of built-in functionality, while still remaining easy-to-use at its core.
