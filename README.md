@@ -190,7 +190,7 @@ Passing `context` to the Stepper will make it automatically available to all ste
   import { MyExampleStepperContext } from './my-stepper-page.svelte';
   import { createStepController } from '@efstajas/svelte-stepper';
 
-  const stepController = createStepController<MyExampleStepperContext>();
+  const stepController = createStepController();
 
   export let context: Writable<MyExampleStepperContext>;
 </script>
