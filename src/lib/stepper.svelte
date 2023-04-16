@@ -50,11 +50,6 @@
 
 	let currentStepIndex = 0;
 	$: currentStep = resolvedSteps[currentStepIndex];
-	$: dispatch('stepChange', {
-		newIndex: currentStepIndex,
-		of: resolvedSteps.length - 1,
-		direction
-	});
 
 	let direction: 'forward' | 'backward' = 'forward';
 
@@ -64,11 +59,6 @@
 	 * @param by The amount of steps to move by.
 	 */
 	async function move(by: number) {
-		if (!resolvedSteps[currentStepIndex + by]) {
-			handleConclusion();
-			return;
-		}
-
 		direction = by > 0 ? 'forward' : 'backward';
 
 		currentStepIndex += by;
@@ -131,7 +121,26 @@
 	}
 
 	function handleGoForward(event: CustomEvent<MovePayload>) {
-		move(event.detail?.by ?? 1);
+		const by = event.detail?.by ?? 1;
+
+		if (!resolvedSteps[currentStepIndex + by]) {
+			handleConclusion();
+			return;
+		}
+
+		move(by);
+		emitStepChange();
+	}
+
+	function handleGoBackward(event: CustomEvent<MovePayload>) {
+		const by = event.detail?.by ?? -1;
+
+		if (!resolvedSteps[currentStepIndex + by]) {
+			throw new Error('Unable to go back further than the first step');
+		}
+
+		move(event.detail?.by ?? -1);
+		emitStepChange();
 	}
 
 	let sidestepConfig: SidestepPayload | undefined = undefined;
@@ -151,6 +160,8 @@
     */
 		internalSteps = [steps[currentStepIndex], ...event.detail.steps];
 		currentStepIndex = 0;
+
+		emitStepChange();
 
 		// Animate to the first side-step
 		await move(1);
@@ -175,6 +186,12 @@
 	async function handleConclusion() {
 		if (sidestepConfig && originalStepIndex !== undefined && originalSteps) {
 			// End the sidestep and go back to the main flow.
+
+			emitStepChange(
+				originalStepIndex,
+				originalSteps.length - 1,
+				'backward',
+			);
 
 			// Temporarily add the sidestep-triggering step one index before the current side-step.
 			internalSteps = [originalSteps[originalStepIndex], internalSteps[currentStepIndex]];
@@ -207,6 +224,14 @@
 		updateResizeObserver();
 	}
 
+	function emitStepChange(
+		newIndex = currentStepIndex,
+		of = resolvedSteps.length - 1,
+		dir = direction
+	) {
+		dispatch('stepChange', { newIndex, of, direction: dir });
+	}
+
 	onMount(() => {
 		const windowResizeListener = () => updateContainerHeight();
 		window.addEventListener('resize', windowResizeListener);
@@ -234,7 +259,7 @@
 				<svelte:component
 					this={currentStep.component}
 					on:goForward={handleGoForward}
-					on:goBackward={(e) => move(e.detail?.by ?? -1)}
+					on:goBackward={handleGoBackward}
 					on:sidestep={handleSidestep}
 					on:cancelSidestep={handleCancelSidestep}
 					{currentStepIndex}
