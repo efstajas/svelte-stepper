@@ -90,7 +90,7 @@ Getting a simple flow going is easy. The core of Svelte Stepper is the `Stepper`
   ];
 </script>
 
-<Stepper {steps} />
+<Stepper steps={exampleSteps} />
 ```
 
 As you can see, you can pass props to your step components using the `props` property. The type of this property is automatically inferred from the provided step component.
@@ -171,13 +171,13 @@ To define context, simply write a function that returns a Svelte `writable` stor
     }),
   ];
 
-  const context: () => Writable<MyExampleStepperContext> = () => writable({
+  const exampleContext: () => Writable<MyExampleStepperContext> = () => writable({
     foo: 'bar',
     bar: 42,
   });
 </script>
 
-<Stepper {steps} {context} />
+<Stepper steps={exampleSteps} context={exampleContext} />
 ```
 
 In this particular example, we're exporting the type of our context writable from a module, so that we can properly type the context writable in our step components later.
@@ -215,7 +215,7 @@ The Stepper component emits events allowing you to react to a step change or con
 ```ts
 
 <Stepper
-  {steps}
+  steps={exampleSteps}
   on:conclusion={() => {
     alert('The last step in the flow has called stepController.nextStep()!');
   }}
