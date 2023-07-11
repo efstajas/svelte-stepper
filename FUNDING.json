@@ -1,8 +1,5 @@
 {
   "drips": {
-    "sepolia": {
-      "ownedBy": "0x99505B669C6064BA2B2f26f2E4fffa5e8d906299"
-    },
     "ethereum": {
       "ownedBy": "0xc8d2FC483233B9dBfeaCd69D4f9d78776cf488C2"
     }
