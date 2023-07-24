@@ -1,8 +1,18 @@
 {
 	"name": "@efstajas/svelte-stepper",
 	"description": "🚶🚶🚶 A simple library for building delightfully animated stepped flows with Svelte.",
-	"keywords": ["svelte", "sveltekit", "typescript", "javascript", "js", "ts", "ui-library", "stepper", "animations"],
-	"version": "0.1.4",
+	"keywords": [
+		"svelte",
+		"sveltekit",
+		"typescript",
+		"javascript",
+		"js",
+		"ts",
+		"ui-library",
+		"stepper",
+		"animations"
+	],
+	"version": "0.1.5",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
@@ -79,5 +89,8 @@
 				"./package/types.d.ts"
 			]
 		}
+	},
+	"dependencies": {
+		"esm-env": "^1.0.0"
 	}
 }
