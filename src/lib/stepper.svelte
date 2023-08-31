@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" generics="CT">
 	import { fly, type TransitionConfig } from 'svelte/transition';
 	import { createEventDispatcher, onDestroy, onMount, tick } from 'svelte';
 	import type { Steps, MovePayload, SidestepPayload, StepperEvents } from './types';
@@ -12,8 +12,7 @@
 	export let steps: Steps;
 
 	// Context props
-	type CT = $$Generic;
-	type CW = $$Generic<(() => Writable<CT>) | undefined>;
+	type CW = (() => Writable<CT>) | undefined;
 	export let context: CW | undefined = undefined;
 	const resolvedContext = context?.();
 
@@ -187,11 +186,7 @@
 		if (sidestepConfig && originalStepIndex !== undefined && originalSteps) {
 			// End the sidestep and go back to the main flow.
 
-			emitStepChange(
-				originalStepIndex,
-				originalSteps.length - 1,
-				'backward',
-			);
+			emitStepChange(originalStepIndex, originalSteps.length - 1, 'backward');
 
 			// Temporarily add the sidestep-triggering step one index before the current side-step.
 			internalSteps = [originalSteps[originalStepIndex], internalSteps[currentStepIndex]];

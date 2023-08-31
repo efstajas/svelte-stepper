@@ -1,312 +1,314 @@
-html, body {
-  margin: 0;
-  padding: 0;
+html,
+body {
+	margin: 0;
+	padding: 0;
 }
 
 :root {
-  --color-positive: #53db53;
-  --color-positive-level-1: #e3ffe3;
-  --color-positive-level-2: #b5ffb5;
-  --color-positive-level-6: #569656;
-  --color-caution: #ffc555;
-  --color-caution-level-1: #fff6e5;
-  --color-caution-level-2: #ffe5b2;
-  --color-caution-level-6: #b27805;
-  --color-primary: #ff5555;
-  --color-primary-level-1: #ffeded;
-  --color-primary-level-2: #ff8787;
-  --color-primary-level-6: #803d3d;
-  --color-foreground: #28333d;
-  --color-foreground-level-1: #f8f8f8;
-  --color-foreground-level-2: #ebeff3;
-  --color-foreground-level-3: #c5d1db;
-  --color-foreground-level-4: #a9b9c7;
-  --color-foreground-level-5: #90a0af;
-  --color-foreground-level-6: #546474;
-  --color-background: #ffffff;
+	--color-positive: #53db53;
+	--color-positive-level-1: #e3ffe3;
+	--color-positive-level-2: #b5ffb5;
+	--color-positive-level-6: #569656;
+	--color-caution: #ffc555;
+	--color-caution-level-1: #fff6e5;
+	--color-caution-level-2: #ffe5b2;
+	--color-caution-level-6: #b27805;
+	--color-primary: #ff5555;
+	--color-primary-level-1: #ffeded;
+	--color-primary-level-2: #ff8787;
+	--color-primary-level-6: #803d3d;
+	--color-foreground: #28333d;
+	--color-foreground-level-1: #f8f8f8;
+	--color-foreground-level-2: #ebeff3;
+	--color-foreground-level-3: #c5d1db;
+	--color-foreground-level-4: #a9b9c7;
+	--color-foreground-level-5: #90a0af;
+	--color-foreground-level-6: #546474;
+	--color-background: #ffffff;
 }
 
-[data-theme="dark"] {
-  --color-positive: #53db53;
-  --color-positive-level-1: #21402f;
-  --color-positive-level-2: #2c6837;
-  --color-positive-level-6: #e3ffe3;
-  --color-caution: #ffc555;
-  --color-caution-level-1: #2f312d;
-  --color-caution-level-2: #524a34;
-  --color-caution-level-6: #ffefcf;
-  --color-primary: #ff5555;
-  --color-primary-level-1: #38282f;
-  --color-primary-level-2: #623237;
-  --color-primary-level-6: #ffd4d4;
-  --color-foreground: #ffffff;
-  --color-foreground-level-1: #162029;
-  --color-foreground-level-2: #29343d;
-  --color-foreground-level-3: #333e47;
-  --color-foreground-level-4: #5e6d7a;
-  --color-foreground-level-5: #8594a1;
-  --color-foreground-level-6: #d3dee8;
-  --color-background: #0e171f;
-}
-
-@font-face {
-  font-family: "Inter Bold";
-  src: url("fonts/Inter-Bold.otf");
+[data-theme='dark'] {
+	--color-positive: #53db53;
+	--color-positive-level-1: #21402f;
+	--color-positive-level-2: #2c6837;
+	--color-positive-level-6: #e3ffe3;
+	--color-caution: #ffc555;
+	--color-caution-level-1: #2f312d;
+	--color-caution-level-2: #524a34;
+	--color-caution-level-6: #ffefcf;
+	--color-primary: #ff5555;
+	--color-primary-level-1: #38282f;
+	--color-primary-level-2: #623237;
+	--color-primary-level-6: #ffd4d4;
+	--color-foreground: #ffffff;
+	--color-foreground-level-1: #162029;
+	--color-foreground-level-2: #29343d;
+	--color-foreground-level-3: #333e47;
+	--color-foreground-level-4: #5e6d7a;
+	--color-foreground-level-5: #8594a1;
+	--color-foreground-level-6: #d3dee8;
+	--color-background: #0e171f;
 }
 
 @font-face {
-  font-family: "Inter SemiBold";
-  src: url("fonts/Inter-SemiBold.otf");
+	font-family: 'Inter Bold';
+	src: url('fonts/Inter-Bold.otf');
 }
 
 @font-face {
-  font-family: "Inter Regular";
-  src: url("fonts/Inter-Regular.otf");
+	font-family: 'Inter SemiBold';
+	src: url('fonts/Inter-SemiBold.otf');
 }
 
 @font-face {
-  font-family: "SourceCodePro Bold";
-  src: url("fonts/SourceCodePro-Bold.otf");
+	font-family: 'Inter Regular';
+	src: url('fonts/Inter-Regular.otf');
 }
 
 @font-face {
-  font-family: "SourceCodePro Regular";
-  src: url("fonts/SourceCodePro-Regular.otf");
+	font-family: 'SourceCodePro Bold';
+	src: url('fonts/SourceCodePro-Bold.otf');
+}
+
+@font-face {
+	font-family: 'SourceCodePro Regular';
+	src: url('fonts/SourceCodePro-Regular.otf');
 }
 
 :root {
-  --typeface-bold: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  --typeface-medium: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  --typeface-regular: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  --typeface-mono-bold: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  --typeface-mono-regular: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+	--typeface-bold: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--typeface-medium: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--typeface-regular: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--typeface-mono-bold: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+		monospace;
+	--typeface-mono-regular: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+		monospace;
 }
-[data-uifont="system"] {
-  --typeface-bold: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  --typeface-medium: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  --typeface-regular: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+[data-uifont='system'] {
+	--typeface-bold: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--typeface-medium: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--typeface-regular: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-[data-codefont="system"] {
-  --typeface-mono-bold: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  --typeface-mono-regular: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+[data-codefont='system'] {
+	--typeface-mono-bold: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+		monospace;
+	--typeface-mono-regular: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+		monospace;
 }
 
-[data-uifont="inter"] {
-  --typeface-bold: "Inter Bold";
-  --typeface-medium: "Inter SemiBold";
-  --typeface-regular: "Inter Regular";
+[data-uifont='inter'] {
+	--typeface-bold: 'Inter Bold';
+	--typeface-medium: 'Inter SemiBold';
+	--typeface-regular: 'Inter Regular';
 }
 
-[data-codefont="sourceCode"] {
-  --typeface-mono-bold: "SourceCodePro Bold";
-  --typeface-mono-regular: "SourceCodePro Regular";
+[data-codefont='sourceCode'] {
+	--typeface-mono-bold: 'SourceCodePro Bold';
+	--typeface-mono-regular: 'SourceCodePro Regular';
 }
 
-h1:first-child, h2:first-child, h3:first-child, h4:first-child {
-  margin-top: 0;
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child {
+	margin-top: 0;
 }
 
-h1, h2, h3, h4 {
-  color: var(--color-foreground);
+h1,
+h2,
+h3,
+h4 {
+	color: var(--color-foreground);
 }
 
 h1,
 .typo-header-1 {
-  font-family: var(--typeface-bold);
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 44px;
-  color: var(--color-primary);
+	font-family: var(--typeface-bold);
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 44px;
+	color: var(--color-primary);
 }
 
 h2,
 .typo-header-2 {
-  font-family: var(--typeface-bold);
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
-  color: var(--color-primary);
+	font-family: var(--typeface-bold);
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	color: var(--color-primary);
 }
 
 h3,
 .typo-header-3 {
-  font-family: var(--typeface-bold);
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 24px;
+	font-family: var(--typeface-bold);
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 24px;
 }
 
 h4,
 .typo-header-4 {
-  font-family: var(--typeface-bold);
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 22.5px;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
+	font-family: var(--typeface-bold);
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 22.5px;
+	margin-top: 2rem;
+	margin-bottom: 0.75rem;
 }
 
 h5,
 .typo-header-5 {
-  font-family: var(--typeface-medium);
-  font-weight: 600;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
+	font-family: var(--typeface-medium);
+	font-weight: 600;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
 }
 
 /* text */
 
-p, a,
+p,
+a,
 .typo-text {
-  font-family: var(--typeface-regular);
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--color-foreground-level-6);
+	font-family: var(--typeface-regular);
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--color-foreground-level-6);
 }
 
 .typo-text-bold {
-  font-family: var(--typeface-medium);
-  font-weight: 600;
-  font-size: 16px;
+	font-family: var(--typeface-medium);
+	font-weight: 600;
+	font-size: 16px;
 }
 
 .typo-text-mono {
-  font-family: var(--typeface-mono-regular);
-  font-weight: normal;
-  font-size: 16px;
+	font-family: var(--typeface-mono-regular);
+	font-weight: normal;
+	font-size: 16px;
 }
 
 .typo-text-mono-bold {
-  font-family: var(--typeface-mono-bold);
-  font-weight: bold;
-  font-size: 16px;
+	font-family: var(--typeface-mono-bold);
+	font-weight: bold;
+	font-size: 16px;
 }
 
 .typo-text-small {
-  font-family: var(--typeface-medium);
-  font-size: 14px;
-  line-height: 18px;
+	font-family: var(--typeface-medium);
+	font-size: 14px;
+	line-height: 18px;
 }
 
 .typo-text-small-bold {
-  font-family: var(--typeface-medium);
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
+	font-family: var(--typeface-medium);
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 18px;
 }
 
 .typo-text-small-mono {
-  font-family: var(--typeface-mono-bold);
-  font-weight: bold;
-  font-size: 14px;
+	font-family: var(--typeface-mono-bold);
+	font-weight: bold;
+	font-size: 14px;
 }
 
 /* Relative links */
 
 .typo-link {
-  color: var(--color-primary);
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 0.25rem;
+	color: var(--color-primary);
+	cursor: pointer;
+	text-decoration: underline;
+	text-underline-offset: 0.25rem;
 }
 
 .typo-link:hover,
 .typo-link:focus {
-  opacity: 0.75;
+	opacity: 0.75;
 }
 
 .typo-link:active {
-  opacity: 0.5;
+	opacity: 0.5;
 }
 
 /* External links */
 .typo-link[href^="http://"]:after,
 .typo-link[href^="https://"]:after
 {
-  content: "↗";
-  margin-left: 0.1rem;
-  text-decoration: none;
-  /* disables text decoration from containing a element */
-  display: inline-block;
-  vertical-align: text-top;
+	content: '↗';
+	margin-left: 0.1rem;
+	text-decoration: none;
+	/* disables text decoration from containing a element */
+	display: inline-block;
+	vertical-align: text-top;
 }
 
 /* Modifiers */
 
 .typo-regular {
-  font-family: var(--typeface-regular);
-  font-weight: 600;
+	font-family: var(--typeface-regular);
+	font-weight: 600;
 }
 
 .typo-semi-bold {
-  font-family: var(--typeface-medium);
-  font-weight: 600;
+	font-family: var(--typeface-medium);
+	font-weight: 600;
 }
 
 .typo-bold {
-  font-family: var(--typeface-bold);
-  font-weight: bold;
+	font-family: var(--typeface-bold);
+	font-weight: bold;
 }
 
 .typo-mono {
-  font-family: var(--typeface-mono-regular);
-  font-weight: normal;
+	font-family: var(--typeface-mono-regular);
+	font-weight: normal;
 }
 
 .typo-mono-bold {
-  font-family: var(--typeface-mono-bold);
-  font-weight: bold;
+	font-family: var(--typeface-mono-bold);
+	font-weight: bold;
 }
 
 .typo-overflow-ellipsis {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .typo-all-caps {
-  font-family: var(--typeface-medium);
-  font-weight: 600;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
+	font-family: var(--typeface-medium);
+	font-weight: 600;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
 }
 
 /* Enable contextual alternates */
 .typo-enable-calt {
-  font-feature-settings: "calt";
+	font-feature-settings: 'calt';
 }
 
 .typo-wrap {
-  hyphens: auto;
-  overflow-wrap: break-word;
+	hyphens: auto;
+	overflow-wrap: break-word;
 }
 
 .typo-inline-code {
-  font-family: var(--typeface-mono-regular);
-  background-color: var(--color-foreground-level-2);
-  padding: 0.125rem 0.25rem;
-  border-radius: 0.25rem;
+	font-family: var(--typeface-mono-regular);
+	background-color: var(--color-foreground-level-2);
+	padding: 0.125rem 0.25rem;
+	border-radius: 0.25rem;
 }
 
 pre {
-  margin: 0;
+	margin: 0;
 }

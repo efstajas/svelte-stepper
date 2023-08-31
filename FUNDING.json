@@ -1,7 +1,7 @@
 {
-  "drips": {
-    "ethereum": {
-      "ownedBy": "0x266e9b3Dcf10E393db54838394f49172dC19d3f7"
-    }
-  }
+	"drips": {
+		"ethereum": {
+			"ownedBy": "0x266e9b3Dcf10E393db54838394f49172dC19d3f7"
+		}
+	}
 }
