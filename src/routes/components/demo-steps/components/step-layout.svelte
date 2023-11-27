@@ -1,14 +1,14 @@
 <script>
-	import ActionRow from "./action-row.svelte";
-
+  import ActionRow from './action-row.svelte';
 </script>
+
 <div class="step-layout">
   <div class="content">
-    <slot/>
+    <slot />
   </div>
   <div class="actions">
     <ActionRow>
-      <slot name="actions"/>
+      <slot name="actions" />
     </ActionRow>
   </div>
 </div>
