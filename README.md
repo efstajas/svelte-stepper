@@ -116,7 +116,7 @@ If all you want to do is change the duration of the default transition, you can 
 />
 ```
 
-### Using custom transition functions and -paremeters
+### Using custom transition functions and -parameters
 
 If you want to set fully custom transitions, you can set the `stepIntroTransition` and `stepOutroTransition` props on the stepper.
 
