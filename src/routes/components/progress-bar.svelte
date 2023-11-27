@@ -5,7 +5,11 @@
 </script>
 
 <div class="progress-bar">
-  <div class="inner" style:width="{(curr / max) * 100}%" style:transition="width {duration}ms ease" />
+  <div
+    class="inner"
+    style:width="{(curr / max) * 100}%"
+    style:transition="width {duration}ms ease"
+  />
 </div>
 
 <style>
@@ -22,4 +26,3 @@
     border-radius: 0 1rem 1rem 0;
   }
 </style>
- 

@@ -1,23 +1,23 @@
-import { createEventDispatcher } from "svelte";
-import type { StepComponentEvents, Steps } from "./types";
+import { createEventDispatcher } from 'svelte';
+import type { StepComponentEvents, Steps } from './types';
 
 export default () => {
   const dispatch = createEventDispatcher<StepComponentEvents>();
 
   function nextStep() {
-    dispatch("goForward");
+    dispatch('goForward');
   }
 
   function previousStep() {
-    dispatch("goBackward");
+    dispatch('goBackward');
   }
 
   function move(by: number) {
-    dispatch("goForward", { by });
+    dispatch('goForward', { by });
   }
 
   function sidestep(steps: Steps) {
-    dispatch("sidestep", { steps });
+    dispatch('sidestep', { steps });
   }
 
   function cancelSidestep() {
@@ -29,6 +29,6 @@ export default () => {
     previousStep,
     move,
     sidestep,
-    cancelSidestep,
-  }
+    cancelSidestep
+  };
 };

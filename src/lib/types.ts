@@ -1,7 +1,7 @@
 import type { SvelteComponent, SvelteComponentTyped } from 'svelte';
 
 export interface MovePayload {
-  by?: number;
+  by: number;
 }
 
 export interface SidestepPayload {
@@ -13,16 +13,16 @@ type Constructor<T> = new (...args: any[]) => T;
 
 export type StepComponentEvents = {
   /** Go forward one step (or a custom amount by setting `by`). */
-  goForward: MovePayload;
+  goForward?: MovePayload;
   /** Go backward one step (or a custom amount by setting `by`). */
-  goBackward: MovePayload;
+  goBackward?: MovePayload;
   /**
    * Temporarily append a secondary flow after the current step, and
    * navigate to the first step in the sidestep. Once the sidestep flow
    * triggers `conclude`, go back to the original step in the original flow.
    */
   sidestep: SidestepPayload;
-  cancelSidestep: never;
+  cancelSidestep: null | undefined;
 };
 
 type OmitContext<T> = Omit<T, 'context' | 'currentStepIndex'>;
@@ -49,6 +49,6 @@ export interface StepperEvents {
     /** The maximum possible index given the current steps. */
     of: number;
     direction: 'forward' | 'backward';
-  }
-  conclusion: never;
+  };
+  conclusion: null | undefined;
 }

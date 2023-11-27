@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { HighlightSvelte } from "svelte-highlight";
-  import "svelte-highlight/styles/github-dark-dimmed.css";
+  import { HighlightSvelte } from 'svelte-highlight';
+  import 'svelte-highlight/styles/github-dark-dimmed.css';
 
   export let code: string;
 </script>
