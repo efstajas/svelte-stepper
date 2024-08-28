@@ -238,7 +238,7 @@
 </script>
 
 <div
-  class="container"
+  class="stepper-container"
   style:height={`${$containerHeight}px`}
   style:overflow={transitioning ? 'hidden' : 'visible'}
 >
@@ -267,7 +267,7 @@
 </div>
 
 <style>
-  .container {
+  .stepper-container {
     position: relative;
   }
 
