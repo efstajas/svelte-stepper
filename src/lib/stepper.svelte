@@ -104,7 +104,7 @@
       updateContainerHeight();
     }
   }
-	
+
   let firstHeightUpdate = true;
   async function updateContainerHeight() {
     if (!observedElement) return;
@@ -214,8 +214,7 @@
     }
   }
 
-  $: {
-    currentStep;
+  $: if (currentStep) {
     updateResizeObserver();
   }
 
