@@ -25,6 +25,9 @@
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write . --plugin='prettier-plugin-svelte'"
   },
+  "engines": {
+    "node": ">=18.18.0"
+  },
   "peerDependencies": {
     "svelte": "^5.38.1"
   },
