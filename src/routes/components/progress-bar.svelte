@@ -9,7 +9,7 @@
     class="inner"
     style:width="{(curr / max) * 100}%"
     style:transition="width {duration}ms ease"
-  />
+  ></div>
 </div>
 
 <style>
